@@ -5,23 +5,53 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
   </head>
-  <body>
-    <div id="app">
-      <input type="color" class="picker" id="cpicker">
-      <input type="number" id="variant" value="3">
-      <input type="checkbox" id="color-variation">
-      <select name="" id="color-select">
-        <option value="r">R</option>
-        <option value="g">G</option>
-        <option value="b">B</option>
-      </select>
-      <div class="box">
+  <body class="bg-light">
+    <div id="app" class="container mt-5">
+      <h1 class="text-center">Color Picker App</h1>
+      <p class="text-center">Use this tool to select a color and generate variations. Customize the number of color variants and choose the color component to adjust.</p>
+      
+      <div class="form-group">
+        <label for="cpicker">Choose a Color:</label>
+        <input type="color" class="form-control" id="cpicker" title="Select your desired color">
+        <small class="form-text text-muted">Pick a base color using the color picker.</small>
+      </div>
+      
+      <div class="form-group">
+        <label for="variant">Number of Variants:</label>
+        <input type="number" class="form-control" id="variant" value="3" min="1" max="10" placeholder="Enter a number between 1 and 10">
+        <small class="form-text text-muted">Specify how many variations of the selected color you want to create.</small>
+      </div>
+      
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="color-variation">
+        <label class="form-check-label" for="color-variation">Enable Color Variation</label>
+        <small class="form-text text-muted">Check this option to apply variations to the selected color.</small>
+      </div>
+      
+      <div class="form-group">
+        <label for="color-select">Select Color Component:</label>
+        <select class="form-control" id="color-select" title="Choose the color component to vary">
+          <option value="r">Red</option>
+          <option value="g">Green</option>
+          <option value="b">Blue</option>
+        </select>
+        <small class="form-text text-muted">Choose which color component to vary for your selected color.</small>
+      </div>
+      
+      <button type="button" class="btn btn-primary" id="apply-button">Apply Colors</button>
+      <button type="button" class="btn btn-secondary" id="reset-button" style="margin-left: 10px;">Reset</button>
+      
+      <div class="box mt-4">
         <div></div>
         <div></div>
         <div></div>
       </div>
     </div>
+    
     <script type="module" src="/main.js"></script>
+
   </body>
 </html>

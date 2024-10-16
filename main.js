@@ -66,9 +66,11 @@ function variant(hex, vr, only = false) {
 }
 const cpicker = document.querySelector('#cpicker')
 const box = document.querySelector(".box")
+const applyBtn = document.querySelector("#apply-button")
+const resetBtn = document.querySelector("#reset-button")
 
 
-cpicker.addEventListener('change', e => {
+applyBtn.addEventListener('click', e => {
  const value = cpicker.value
  const vrs = document.querySelector("#variant")
  const colorSelect = document.querySelector("#color-select")
@@ -85,6 +87,16 @@ cpicker.addEventListener('change', e => {
     node.style.backgroundColor = colors[i]
     box.appendChild(node)
   };
+})
+
+resetBtn.addEventListener("click", e => {
+  const colors = ["red", "green", "blue"]
+  box.innerHTML = ""
+  for(var i = 0; i < 3; i++) {
+    const node = document.createElement("div")
+    node.style.backgroundColor = colors[i]
+    box.appendChild(node)
+  }
 })
 
 

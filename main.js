@@ -69,8 +69,16 @@ const applyBtn = document.querySelector("#apply-button")
 const resetBtn = document.querySelector("#reset-button")
 
 
+ var picker = new Picker(cpicker);
+
+    // You can do what you want with the chosen color using two callbacks: onChange and onDone.
+    picker.onChange = function(color) {
+        picker.style.background = color.rgbaString;
+        cpicker.setAttribute('data-color', color.hex)
+      
+    };
 applyBtn.addEventListener('click', e => {
- const value = cpicker.value
+ const value = cpicker.getAttribute("data-color")
  const vrs = document.querySelector("#variant")
  const colorSelect = document.querySelector("#color-select")
  const colorVariation = document.querySelector("#color-variation")

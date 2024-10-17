@@ -8,6 +8,9 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+  "dependencies": {
+    "vanilla-picker": "^2.12.3"
+  }
   "devDependencies": {
     "vite": "^5.4.8"
   }

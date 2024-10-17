@@ -1,6 +1,7 @@
 import './style.css'
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
+import Picker from 'vanilla-picker';
 
 function toRgbStr(rgb) {
   const {r,g,b} = rgb;

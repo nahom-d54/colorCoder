@@ -1,0 +1,9 @@
+# Allow all user agents
+User-agent: *
+
+# Allow access to all content
+Allow: /
+
+# Disallow access to specific directories (example)
+Disallow: /private/
+Disallow: /temp/
